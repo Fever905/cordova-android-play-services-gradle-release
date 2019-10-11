@@ -1,108 +1,77 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <plugin xmlns="http://www.phonegap.com/ns/plugins/1.0"
         xmlns:android="http://schemas.android.com/apk/res/android"
-        id="cordova-android-firebase-gradle-release"
+        id="cordova-android-play-services-gradle-release"
         version="4.0.0">
 
-    <name>cordova-android-firebase-gradle-release</name>
-    <description>Cordova/Phonegap plugin for Android to align versions of the Firebase library components specified by other plugins to a specific version.</description>
+    <name>cordova-android-play-services-gradle-release</name>
+    <description>Cordova/Phonegap plugin for Android to align versions of the Play Services library components specified by other plugins to a specific version</description>
     <author>Dave Alden</author>
-    
+
     <engines>
-      <engine name="cordova" version=">=8.0.0" />
+        <engine name="cordova" version=">=8.0.0" />
         <engine name="cordova-android" version=">=7.0.0" />
     </engines>
 
     <platform name="android">
-        <hook type="after_prepare" src="scripts/apply-changes.js" />
+       <hook type="after_prepare" src="scripts/apply-changes.js" />
         <hook type="before_build" src="scripts/apply-changes.js" />
         <hook type="after_plugin_install" src="scripts/apply-changes.js" />
 
-        <!-- Firebase Core -->
-        <preference name="firebase-core" default="17.0.0" />
+        <preference name="play-services-ads" default="18.0.0" />
+        <preference name="play-services-ads-identifier" default="17.0.0" />
+        <preference name="play-services-ads-lite" default="18.0.0" />
+        <preference name="play-services-afs-native" default="17.0.0" />
+        <preference name="play-services-analytics" default="17.0.0" />
+        <preference name="play-services-analytics-impl" default="17.0.0" />
+        <preference name="play-services-appinvite" default="18.0.0" />
+        <preference name="play-services-audience" default="17.0.0" />
+        <preference name="play-services-auth" default="17.0.0" />
+        <preference name="play-services-auth-api-phone" default="17.0.0" />
+        <preference name="play-services-awareness" default="17.0.0" />
+        <preference name="play-services-base" default="17.0.0" />
+        <preference name="play-services-basement" default="17.0.0" />
+        <preference name="play-services-cast" default="17.0.0" />
+        <preference name="play-services-cast-framework" default="17.0.0" />
+        <preference name="play-services-clearcut" default="17.0.0" />
+        <preference name="play-services-cronet" default="17.0.0" />
+        <preference name="play-services-drive" default="17.0.0" />
+        <preference name="play-services-fido" default="18.0.0" />
+        <preference name="play-services-fitness" default="17.0.0" />
+        <preference name="play-services-flags" default="17.0.0" />
+        <preference name="play-services-games" default="18.0.0" />
+        <preference name="play-services-gass" default="18.0.0" />
+        <preference name="play-services-gcm" default="17.0.0" />
+        <preference name="play-services-identity" default="17.0.0" />
+        <preference name="play-services-iid" default="17.0.0" />
+        <preference name="play-services-instantapps" default="17.0.0" />
+        <preference name="play-services-location" default="17.0.0" />
+        <preference name="play-services-maps" default="17.0.0" />
+        <preference name="play-services-measurement" default="17.2.0" />
+        <preference name="play-services-measurement-api" default="17.2.0" />
+        <preference name="play-services-measurement-impl" default="17.2.0" />
+        <preference name="play-services-measurement-sdk" default="17.2.0" />
+        <preference name="play-services-measurement-sdk-api" default="17.2.0" />
+        <preference name="play-services-nearby" default="17.0.0" />
+        <preference name="play-services-oss-licenses" default="17.0.0" />
+        <preference name="play-services-panorama" default="17.0.0" />
+        <preference name="play-services-phenotype" default="17.0.0" />
+        <preference name="play-services-places" default="17.0.0" />
+        <preference name="play-services-places-placereport" default="17.0.0" />
+        <preference name="play-services-plus" default="17.0.0" />
+        <preference name="play-services-safetynet" default="17.0.0" />
+        <preference name="play-services-stats" default="17.0.0" />
+        <preference name="play-services-tagmanager" default="17.0.0" />
+        <preference name="play-services-tagmanager-api" default="17.0.0" />
+        <preference name="play-services-tagmanager-v4-impl" default="17.0.0" />
+        <preference name="play-services-tasks" default="17.0.0" />
+        <preference name="play-services-vision" default="18.0.0" />
+        <preference name="play-services-vision-common" default="18.0.0" />
+        <preference name="play-services-vision-image-label" default="18.0.0" />
+        <preference name="play-services-wallet" default="17.0.0" />
+        <preference name="play-services-wearable" default="17.0.0" />
 
-        <!-- Ads -->
-        <preference name="firebase-ads" default="18.0.0" />
-
-        <!-- Analytics -->
-        <preference name="firebase-analytics" default="17.0.0" />
-
-        <!-- App Indexing -->
-        <preference name="firebase-appindexing" default="19.0.0" />
-
-        <!-- Authentication -->
-        <preference name="firebase-auth" default="18.0.0" />
-
-        <!-- Cloud Firestore -->
-        <preference name="firebase-firestore" default="20.0.0" />
-
-        <!-- Cloud Functions -->
-        <preference name="firebase-functions" default="18.0.0" />
-
-        <!-- Cloud Messaging -->
-        <preference name="firebase-messaging" default="19.0.0" />
-
-        <!-- Cloud Storage -->
-        <preference name="firebase-storage" default="18.0.0" />
-
-        <!-- Crash Reporting -->
-        <preference name="firebase-crash" default="16.2.1" />
-
-        <!-- Crashlytics -->
-        <preference name="crashlytics" default="2.10.1" />
-
-        <!-- Dynamic Links -->
-        <preference name="firebase-dynamic-links" default="18.0.0" />
-
-        <!-- Invites -->
-        <preference name="firebase-invites" default="17.0.0" />
-
-        <!-- In-App Messaging -->
-        <preference name="firebase-inappmessaging" default="18.0.1" />
-
-        <!-- In-App Messaging Display -->
-        <preference name="firebase-inappmessaging-display" default="18.0.1" />
-
-        <!-- ML Kit: Vision APIs -->
-        <preference name="firebase-ml-vision" default="21.0.0" />
-
-        <!-- ML Kit: Image Labeling Model -->
-        <preference name="firebase-ml-vision-image-label-model" default="18.0.0" />
-
-        <!-- ML Kit: Face Detection Model -->
-        <preference name="firebase-ml-vision-face-model" default="18.0.0" />
-
-        <!-- ML Kit: Object Detection and Tracking Model -->
-        <preference name="firebase-ml-vision-object-detection-model" default="17.0.0" />
-
-        <!-- ML Kit: Natural Language APIs -->
-        <preference name="firebase-ml-natural-language" default="20.0.0" />
-
-        <!-- ML Kit: Language Identification Model -->
-        <preference name="firebase-ml-natural-language-language-id-model" default="20.0.0" />
-
-        <!-- ML Kit: Translate Model -->
-        <preference name="firebase-ml-natural-language-translate-model" default="20.0.0" />
-
-        <!-- ML Kit: Smart Reply Model -->
-        <preference name="firebase-ml-natural-language-smart-reply-model" default="20.0.0" />
-
-        <!-- ML Kit: Custom Model APIs -->
-        <preference name="firebase-ml-model-interpreter" default="20.0.0" />
-
-        <!-- ML Kit: AutoML Vision Edge API -->
-        <preference name="firebase-ml-vision-automl" default="17.0.0" />
-
-        <!-- Performance Monitoring -->
-        <preference name="firebase-perf" default="18.0.0" />
-
-        <!-- Realtime Database -->
-        <preference name="firebase-database" default="18.0.0" />
-
-        <!-- Remote Config -->
-        <preference name="firebase-config" default="18.0.0" />
-
-        <framework src="cordova-android-firebase-gradle-release.gradle" custom="true" type="gradleReference" />
+        <framework src="cordova-android-play-services-gradle-release.gradle" custom="true" type="gradleReference" />
     </platform>
 
 </plugin>
